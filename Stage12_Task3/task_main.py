@@ -1,4 +1,4 @@
-# The program that check is the randomly generated list (vector) with the different values
+# The program that checks is the randomly generated list (vector) with the different values
 
 import model_logic
 import value
