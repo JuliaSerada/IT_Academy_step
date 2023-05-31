@@ -17,3 +17,17 @@ class GiftAssistance:
             return total
         else:
             return 0
+
+    @staticmethod
+    def calculate_total_weight(gift):
+        if isinstance(gift, NewYearGift) and gift.size != 0:
+            total = 0
+            for i in range(gift.size):
+                sweet = gift.get_sweet(i)
+
+                if isinstance(sweet, Sweets):
+                    total += sweet.weight
+
+            return total
+        else:
+            return 0
