@@ -2,7 +2,7 @@ from Final_Exam_Stage.entity.sweets import Sweets
 
 
 class ChocolateCandy(Sweets):
-    def __init__(self, ingredient="nuts", brand="no name", weight=0, price=0):
+    def __init__(self, ingredient="nuts", brand="Snickers", weight=0, price=0):
         super().__init__(price)
         self.__ingredient = ingredient
         self.__brand = brand
@@ -22,7 +22,8 @@ class ChocolateCandy(Sweets):
 
     @ingredient.setter
     def ingredient(self, ingredient):
-        self.__ingredient = ingredient
+        if isinstance(ingredient, str):
+            self.__ingredient = ingredient
 
     @brand.setter
     def brand(self, brand):
@@ -30,7 +31,8 @@ class ChocolateCandy(Sweets):
 
     @weight.setter
     def weight(self, weight):
-        self.__weight = weight
+        if weight > 0:
+            self.__weight = weight
 
     def __str__(self):
         return (f"Chocolate candy: ingredient = {self.__ingredient}, "

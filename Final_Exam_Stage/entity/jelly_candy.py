@@ -2,7 +2,7 @@ from Final_Exam_Stage.entity.sweets import Sweets
 
 
 class JellyCandy(Sweets):
-    def __init__(self, color="no name", weight=0, price=0):
+    def __init__(self, color="red", weight=0, price=0):
         super().__init__(price)
         self.__color = color
         self.__weight = weight
@@ -17,11 +17,13 @@ class JellyCandy(Sweets):
 
     @color.setter
     def color(self, color):
-        self.__color = color
+        if isinstance(color, str):
+            self.__color = color
 
     @weight.setter
     def weight(self, weight):
-        self.__weight = weight
+        if weight > 0:
+            self.__weight = weight
 
     def __str__(self):
         return (f"Jelly candy: color = {self.__color}, "

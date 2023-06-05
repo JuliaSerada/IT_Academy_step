@@ -20,3 +20,6 @@ class Sweets:
     def weight(self, weight):
         if isinstance(weight, (int, float)) and weight > 0:
             self.__weight = weight
+
+    def get_price(self):
+        return self.__price
