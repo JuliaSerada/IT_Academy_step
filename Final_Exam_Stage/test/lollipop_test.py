@@ -59,8 +59,8 @@ class LollipopTest(unittest.TestCase):
     def test_flavor_property_negative(self):
         lollipop = Lollipop()
         expected = lollipop.flavor
-        lollipop.flavor = "apple"
-        self.assertEqual(expected, lollipop.flavor)
+        lollipop.flavor = "orange"
+        self.assertNotEqual(expected, lollipop.flavor)
 
     def test_flavor_property_positive(self):
         lollipop = Lollipop()

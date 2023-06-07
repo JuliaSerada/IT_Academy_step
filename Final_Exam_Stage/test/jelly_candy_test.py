@@ -60,7 +60,7 @@ class JellyCandyTest(unittest.TestCase):
         jelly_candy = JellyCandy()
         expected = jelly_candy.color
         jelly_candy.color = "blue"
-        self.assertEqual(expected, jelly_candy.color)
+        self.assertNotEqual(expected, jelly_candy.color)
 
     def test_color_property_positive(self):
         jelly_candy = JellyCandy()

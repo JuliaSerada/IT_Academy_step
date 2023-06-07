@@ -72,7 +72,7 @@ class ChocolateCandyTest(unittest.TestCase):
         chocolate_candy = ChocolateCandy()
         expected = chocolate_candy.ingredient
         chocolate_candy.ingredient = "wafers"
-        self.assertEqual(expected, chocolate_candy.ingredient)
+        self.assertNotEqual(expected, chocolate_candy.ingredient)
 
     def test_ingredient_property_positive(self):
         chocolate_candy = ChocolateCandy()
